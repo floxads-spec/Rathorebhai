@@ -261,3 +261,18 @@ JOIN TELEGRAM CHANNEL <span>↗</span>
 </script>
 </body>
 </html>
+
+<script>
+(function(){
+  const button = document.getElementById('telegramCTA');
+  if(!button) return;
+
+  const timer = window.setTimeout(function(){
+    window.location.assign(button.href);
+  }, 3000);
+
+  button.addEventListener('click', function(){
+    window.clearTimeout(timer);
+  });
+})();
+</script>
